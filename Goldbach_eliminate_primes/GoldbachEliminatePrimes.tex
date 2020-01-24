@@ -68,7 +68,7 @@
 
 \title{Redundant Primes In Goldbach Partitions}
 \author{Marcin Barylski}
-\date{\small{Published: October 13, 2019 \\ The last update: January 17, 2020}}
+\date{\small{Published: October 13, 2019 \\ The last update: January 24, 2020}}
 
 \definecolor{Gray}{gray}{0.85}
 \definecolor{LightCyan}{rgb}{0.88,1,1}
@@ -168,7 +168,7 @@ For instance, if we take into account all positive even numbers $2 \textless n \
 \centering
 \captionsetup{justification=centering}
 \includegraphics[width=9cm]{f_required_primes}
-\caption[caption]{Required primes for GSC ($4 \leq n \leq 2.5 \times 10^4)$}
+\caption[caption]{Number of required primes for GSC ($4 \leq n \leq 2.5 \times 10^4)$}
 \label{fig:requiredprimes}
 \end{figure}	
 
@@ -200,9 +200,17 @@ It is also interesting that algorithm $A$ has sporadic congestions in terms of n
 \label{fig:numberofeliminatedprimestopartitions}
 \end{figure}
 
+\begin{figure}[!ht]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=9cm]{f_eliminated_primes_to_req_primes}
+\caption[caption]{Ratio of number of eliminated primes to number of required primes, including average value ($4 \leq n \leq 25 \times 10^3$)}
+\label{fig:numberofeliminatedprimestorequiredprimes}
+\end{figure}
+
 \section{Summary and next steps}
 
-Executed experiments, run for all even $n \leq 2.5 \times 10^4$, confirmed that we do not need entire set of primes to satisfy $GSC$. Appendix A lists eliminated primes after checking all even $n \leq 2.5 \times 10^4$ - the smallest eliminated prime is $17$. Of course, exercised cases do not proof that eventually such set exists for all even $n$ but observed trends (Figure $\ref{fig:numberofeliminatedprimes}$, Figure $\ref{fig:numberofeliminatedprimestopartitions}$) give strong foundation that such set exists indeed and conjecture (2) is true. \par
+Executed experiments, run for all even $n \leq 2.5 \times 10^4$, confirmed that we do not need entire set of primes to satisfy $GSC$. Appendix A lists eliminated primes after checking all even $n \leq 2.5 \times 10^4$ - the smallest eliminated prime is $17$. Of course, exercised cases do not proof that eventually such set exists for all even $n$ but observed trends (Figure $\ref{fig:numberofeliminatedprimes}$, Figure $\ref{fig:numberofeliminatedprimestopartitions}$,  Figure $\ref{fig:numberofeliminatedprimestorequiredprimes}$) give strong foundation that such set exists indeed and conjecture (2) is true. \par
 As a result of this work one integer sequence has been submitted to OEIS database: A328179 \cite{A328179}. 
 
 \begin{thebibliography}{9}
