@@ -1,0 +1,108 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[10pt,onecolumn]{article}
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{graphicx}
+\usepackage{listings} 
+\usepackage{caption} 
+\usepackage{xcolor,colortbl}
+\usepackage{mathtools}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{pdflscape}
+
+\graphicspath{ {figures/} }
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=1in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{polski}
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+\setlength{\parindent}{0.5cm} 
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\definecolor{Gray}{gray}{0.85}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+\newcolumntype{b}{>{\columncolor{white}}c}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\newcommand{\subsubfloat}[2]{%
+  \begin{tabular}{@{}c@{}}#1\\#2\end{tabular}%
+}
+
+\title{Zadanie 805 z Klubu 44M}
+\author{Marcin Barylski}
+\date{\small{1 listopad, 2020 \\ Gdańsk}}
+
+\begin{document}
+\maketitle
+
+\section{Treść zadania}
+
+Wewnątrz wypukłego n-kąta $A_1 A_2 \dots A_n$  leży taki punkt $P$,  że każdy z trójkątów $P A_i A_{i+1}$  jest równoramienny (przyjmujemy $A_{n+1}=A_1$  ). Czy stąd wynika, że wielokąt ma okrąg opisany, którego środkiem jest punkt $P$? 
+
+\section{Rozwiązanie}
+
+Nie, można zbudować taki wielokąt wypukły, który będzie spełniał założenia zadania, ale punkt $P$ nie będzie środkiem okręgu opisanego (Rysunek 1 ilustruje taki kontrprzykład).
+
+\begin{figure}[!ht]
+\centering
+\captionsetup{justification=centering}
+\includegraphics[width=9cm]{rys_1}
+\caption[caption]{Kontrprzykład}
+\label{fig:rys1}
+\end{figure}
+
+Trójkąty: $P A_1 A_2$, $P A_2 A_3$, $P A_3 A_4$, $P A_4 A_5$, $P A_5 A_1$ są równoramienne, bo: \\ $\mid P A_1 \mid = \mid A_1 A_2 \mid$, $\mid P A_3 \mid = \mid A_2 A_3 \mid$, $\mid P A_3 \mid = \mid P A_4 \mid$, $\mid P A_5 \mid = \mid A_4 A_5 \mid$, $\mid P A_1 \mid = \mid P A_5 \mid$. \\
+Jednakże okrąg o środku $P$ nie może przechodzić przez wszystkie wierzchołki wielokąta (czyli być na nim opisanym), gdyż np. $\mid P A_3 \mid \textless \mid P A_1 \mid$.
+
+\end{document}
